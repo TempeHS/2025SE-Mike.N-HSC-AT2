@@ -9,3 +9,9 @@ graphviz
 pydot-ng
 pillow
 pydotplus
+xgboost
+catboost
+umap
+plotly.express
+optuna
+optuna.integration
