@@ -15,3 +15,7 @@ umap
 plotly.express
 optuna
 optuna.integration
+flask-limiter
+flask
+flask-cors
+pickle
