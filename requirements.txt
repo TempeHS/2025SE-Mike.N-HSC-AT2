@@ -19,3 +19,4 @@ flask-limiter
 flask
 flask-cors
 pickle
+sqlite
