@@ -1,0 +1,69 @@
+* {
+}
+body {
+}
+.container {
+}
+
+.row {
+}
+
+.collapse {
+  margin-bottom: 15px;
+}
+
+.container-custom {
+  min-height: calc(100vh - 56px);
+  padding-top: 20px;
+}
+
+.form-custom {
+  width: 66.67%;
+  max-width: 1200px;
+  height: auto;
+  min-width: 800px;
+}
+
+.setup-2fa-container {
+  margin-top: 1vh; /* Add margin to top */
+  margin-bottom: 1vh; /* Add margin to bottom */
+}
+
+.setup-2fa-box {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  width: 100%;
+  max-width: 350px;
+}
+
+.setup-2fa-title {
+  font-size: 1.25rem;
+}
+
+.setup-2fa-text {
+  font-size: 0.875rem;
+}
+
+.setup-2fa-qr {
+  max-width: 80%;
+  height: auto;
+}
+
+.setup-2fa-button {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+.collapseExample {
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+  display: inline;
+  vertical-align: baseline;
+}

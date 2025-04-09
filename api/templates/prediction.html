@@ -1,0 +1,113 @@
+{% extends "layout.html" %} {% block content %} {% with messages =
+get_flashed_messages(with_categories=true) %} {% if messages %}
+<div class="container mt-3">
+  {% for category, message in messages %}
+  <div
+    class="alert alert-{{ category }} alert-dismissible fade show"
+    role="alert"
+  >
+    {{ message }}
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+  {% endfor %}
+</div>
+{% endif %} {% endwith %}
+<title>Concrete Strength Prediction</title>
+<div class="container align-items-center justify-content-center">
+  <form
+    id="predictionForm"
+    class="border p-4 rounded shadow d-flex flex-column justify-content-between needs-validation"
+    method="POST"
+    action="/prediction"
+    novalidate
+  >
+    <h2 class="text-center mb-4">Concrete Strength Prediction</h2>
+    {{ form.hidden_tag() }}
+
+    <div class="mb-3">
+      {{ form.api_key.label(class="form-label") }} {{
+      form.api_key(class="form-control", required=True) }} {% if
+      form.api_key.errors %} {% for error in form.api_key.errors %}
+      <div class="alert alert-danger mt-3">{{ error }}</div>
+      {% endfor %} {% endif %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.cement.label(class="form-label") }} {{
+      form.cement(class="form-control", required=True) }} {% if
+      form.cement.errors %} {% for error in form.cement.errors %}
+      <div class="alert alert-danger mt-3">{{ error }}</div>
+      {% endfor %} {% endif %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.blast_furnace_slag.label(class="form-label") }} {{
+      form.blast_furnace_slag(class="form-control", required=True) }} {% if
+      form.blast_furnace_slag.errors %} {% for error in
+      form.blast_furnace_slag.errors %}
+      <div class="alert alert-danger mt-3">{{ error }}</div>
+      {% endfor %} {% endif %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.fly_ash.label(class="form-label") }} {{
+      form.fly_ash(class="form-control", required=True) }} {% if
+      form.fly_ash.errors %} {% for error in form.fly_ash.errors %}
+      <div class="alert alert-danger mt-3">{{ error }}</div>
+      {% endfor %} {% endif %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.water.label(class="form-label") }} {{
+      form.water(class="form-control", required=True) }} {% if form.water.errors
+      %} {% for error in form.water.errors %}
+      <div class="alert alert-danger mt-3">{{ error }}</div>
+      {% endfor %} {% endif %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.superplasticizer.label(class="form-label") }} {{
+      form.superplasticizer(class="form-control", required=True) }} {% if
+      form.superplasticizer.errors %} {% for error in
+      form.superplasticizer.errors %}
+      <div class="alert alert-danger mt-3">{{ error }}</div>
+      {% endfor %} {% endif %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.coarse_aggregate.label(class="form-label") }} {{
+      form.coarse_aggregate(class="form-control", required=True) }} {% if
+      form.coarse_aggregate.errors %} {% for error in
+      form.coarse_aggregate.errors %}
+      <div class="alert alert-danger mt-3">{{ error }}</div>
+      {% endfor %} {% endif %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.fine_aggregate.label(class="form-label") }} {{
+      form.fine_aggregate(class="form-control", required=True) }} {% if
+      form.fine_aggregate.errors %} {% for error in form.fine_aggregate.errors
+      %}
+      <div class="alert alert-danger mt-3">{{ error }}</div>
+      {% endfor %} {% endif %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.age.label(class="form-label") }} {{ form.age(class="form-control",
+      required=True) }} {% if form.age.errors %} {% for error in form.age.errors
+      %}
+      <div class="alert alert-danger mt-3">{{ error }}</div>
+      {% endfor %} {% endif %}
+    </div>
+
+    <div class="text-center">
+      {{ form.submit(class="btn btn-primary w-100") }}
+    </div>
+  </form>
+</div>
+{% endblock %}

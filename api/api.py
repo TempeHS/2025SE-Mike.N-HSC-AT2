@@ -69,9 +69,9 @@ def get_prediction():
     data = pd.DataFrame(data, columns=features)
 
     data = xgb.DMatrix(data)
-    model = pickle.load(open('C:/Users/admin/Documents/GitHub/2025SE-Mike.N-HSC-AT2/model/xgboost.pkl', 'rb'))
+    model = pickle.load(open('../model/xgboost.pkl', 'rb'))
     prediction = model.predict(data)
-    return jsonify({"prediction": prediction.tolist()}), 201
+    return jsonify({"prediction": f"{prediction.tolist()} MPa"}), 201
 
 
 @api.route("/get_api_key", methods=["POST"])

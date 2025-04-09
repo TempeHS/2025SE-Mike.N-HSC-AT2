@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#007bff" />
+    <link rel="manifest" href="../static/manifest.json" />
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" />
+    <title>Get API Key</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2 class="text-center">Request Your API Key</h2>
+      <form id="api-key-form" class="mt-4">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Get API Key</button>
+      </form>
+      <div id="result" class="mt-4 text-center"></div>
+    </div>
+    <script src="../static/js/get_api_key.js"></script>
+  </body>
+</html>
