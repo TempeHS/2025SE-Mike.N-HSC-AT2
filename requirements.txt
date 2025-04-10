@@ -11,7 +11,7 @@ pillow
 pydotplus
 xgboost
 catboost
-umap
+umap-learn
 plotly.express
 optuna
 optuna.integration
