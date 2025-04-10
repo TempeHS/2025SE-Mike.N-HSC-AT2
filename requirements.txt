@@ -12,6 +12,7 @@ pydotplus
 xgboost
 catboost
 umap-learn
+scipy.io
 plotly.express
 optuna
 optuna.integration
