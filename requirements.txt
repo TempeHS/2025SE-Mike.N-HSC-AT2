@@ -15,8 +15,7 @@ umap
 plotly.express
 optuna
 optuna.integration
-flask-limiter
 flask
-flask-cors
-pickle
-sqlite
+flask_limiter
+flask_cors
+flask_wtf

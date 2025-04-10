@@ -18,6 +18,11 @@ get_flashed_messages(with_categories=true) %} {% if messages %}
 </div>
 {% endif %} {% endwith %}
 <title>Concrete Strength Prediction</title>
+<div class="mb-3">
+  Disclaimer: Entries are not recorded. Predictions can be wrong, please check
+  the outputs with empirical tests. Please upload data using the api to improve
+  the model.
+</div>
 <div class="container align-items-center justify-content-center">
   <form
     id="predictionForm"
